@@ -9,12 +9,16 @@
 
   <!-- Bootstrap CSS v5.2.0-beta1 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-  
+
  
 
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
-    <link rel="stylesheet"    href="iziToast.min.css">
+    <link rel="stylesheet"        href="iziToast.min.css">
+    <script src="iziToast.min.js" type="text/javascript"></script>
+
+   
+   <!--  -->
 </head>
 
 <body>
@@ -25,9 +29,11 @@
     <!--Seccions-->
     <section class="p-5 mt-5">
 
-      <script src="iziToast.min.js" type="text/javascript"></script>
-
+     
         @yield('content')
+
+        
+   
 
     </section>
     

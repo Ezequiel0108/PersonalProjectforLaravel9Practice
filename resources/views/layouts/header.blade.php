@@ -1,6 +1,6 @@
     <!-- place navbar here -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand">Brand</a>
+        <a class="navbar-brand"><div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div></a>
         <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -20,6 +20,23 @@
               <a class="nav-link {{request()->routeIs('contactanos.index')? 'activo':""}}"  href="{{route('contactanos.index')}}"  >Contactanos</a>
               @dump(request()->routeIs('contactanos.index'))
             </li>
+            <li class="nav-item">
+               <!-- Authentication -->
+          <form method="POST" action="{{ route('logout') }}">
+            @csrf
+
+            <x-responsive-nav-link :href="route('logout')"
+                    onclick="event.preventDefault();
+                                this.closest('form').submit();">
+                {{ __('Log Out') }}
+            </x-responsive-nav-link>
+        </form>
+        
+
+            </li>
           </ul>
         </div>
+   
+         
+  
       </nav>
